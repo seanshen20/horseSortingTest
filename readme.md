@@ -10,10 +10,15 @@ The code should be at a standard you'd feel comfortable with putting in producti
 
 # Getting Started
 Prerequsites
+
 Visual studio 2019 
+
 Download the zip and open the solution in vs2019 editor
-ctrl + F5 
+
+ctrl + F5 to run the program
+
 Four horses ascending order displayed from both xml and json are listed in console
+
 Build the project
 
 # Running the Tests
