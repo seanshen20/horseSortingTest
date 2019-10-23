@@ -6,26 +6,42 @@ Create an application which outputs the horse names in price ascending order.
 
 The code should be at a standard you'd feel comfortable with putting in production.
 
-## Background
+# Horse automated Ascending Sorting console App  
 
-The source data reflects how BetEasy has different providers of data which feed our website.
+# Getting Started
+Prerequsites
+Visual studio 2019 
+Download the zip and open the solution in vs2019 editor
+Build the project
 
-The data files are used allows creation of different races:
-* Caulfield_Race1.xml https://beteasy.com.au/racing-betting/horse-racing/caulfield/20171216/race-1-798068-25502504  
-* Wolferhampton_Race1.json https://beteasy.com.au/racing-betting/horse-racing/wolverhampton/20171213/race-1-797507-25500650
+# Running the Tests
+The tests covers service, simple unit. Moq is used as Mock framework. Nunit is used in this example.
 
-## Guidelines
+It tests the Handle exception, mocked service, and Factory Method that create object read xml, json automatically based on the file extension.
 
-You can either complete the test prior to the interview or come in and do it as part of the technical interview. The application shell provided is a suggestion only, if C#/.Net isn't your preferred language/Framework please use what you're most comfortable with.
+File read test: if read file not successfully, throw custom exception. edge cases
+Factory Method test: Test the factory design pattern and generated corresponding instance
+Contoller test: test the ascending sorting and return type e.g. string['horsename1'...]
 
-### At Home
-* Please limit your time to 2 hours. If you don't complete it within this time just let us know what is outstanding.
-* Commit your code at regular intervals so we can see how you reached your solution
-* Once completed push to a public repo and share the link with us
-* Please replace this ReadMe with any setup required
+# Built With
+asp net core 2.0
 
-### At BetEasy
-* The goal of this challenge is not to complete the exercise, but to give us an understanding on how you tackle problems. Please talk us through your thinking process & assumptions as you go.
-* Feel free to use any resources you would normally use (Google, StackOverflow etc.)
-* Please ask any questions you wish
-* The coding exercise will be done on the developer test laptop (1141): Test // Wagering99
+# Versioning 1.0.0
+
+# Authors
+Sean Shen
+
+# Acknoledgments
+ Time is limited, refactor is required in future.
+# Features
+Read the data file, and automatically read the file to object depending on file extention name e.g( .json, .xml)
+Defensive coding is used someplace, but basically limited to certain scope.
+No DI framework applied, autofac would be added in the future. Simple DI is written in this example
+Various Nunit test is developed as a manner of TDD.
+
+# Need to Improve
+linq sorting xml could be refactored. 
+Repository pattern might be applied if the system goes complex
+
+
+
