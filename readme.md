@@ -50,5 +50,6 @@ Various Nunit test is developed as a manner of TDD.
 linq sorting xml could be refactored. 
 Repository pattern might be applied if the system goes complex
 
+Data Processing should consider conflict of horse name or price, the structure of Json and xml (e.g all the files obtained from the different servers have the anticipated structure to format or not). Those could be raised to the next sprint, when requirements are clear. 
 
 
