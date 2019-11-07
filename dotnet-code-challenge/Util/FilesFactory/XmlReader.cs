@@ -11,10 +11,25 @@ namespace dotnet_code_challenge.Util.FilesFactory
     {
         public IEnumerable<Horse> read(string filePath)
         {
-            
+
             var result = new List<Horse>();
 
             XElement x = XElement.Load(filePath);
+
+            //cleaner code 
+            //var a = x.Descendants("horse")
+            //    .Where(h => !string.IsNullOrEmpty((string)h.Attribute("Price")));
+            //var b = x.Descendants("horse")
+            //            .Where(h => !string.IsNullOrEmpty((string)h.Attribute("name")));
+
+            //var c = a.Join(b,
+            //    h1 => (string)h1.Attribute("number"),
+            //    h2 => (string)h2.Element("number"),
+            //    (h1, h2) => new Horse
+            //    {
+            //        Name = (string)h2.Attribute("name"),
+            //        Price = (string)h1.Attribute("Price")
+            //    });
             var price = x.Descendants("horse").Where(h => !string.IsNullOrEmpty((string)h.Attribute("Price"))).Select(h =>
             {
                 return new
@@ -38,7 +53,7 @@ namespace dotnet_code_challenge.Util.FilesFactory
 
             foreach (var p in price)
             {
-                string name = hs.Where(h => h.number == p.number).Select(h => h.name).ToList()[0];
+                string name = hs.Where(h => h.number == p.number).Select(h => h.name).FirstOrDefault();
                 result.Add(new Horse
                 {
                     Name = name,

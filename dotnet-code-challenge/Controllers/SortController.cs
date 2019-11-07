@@ -23,7 +23,7 @@ namespace dotnet_code_challenge.Controllers
         {
             return _houseService.CombineHorses().OrderBy(h =>
             {
-                Double.TryParse(h.Price, out double p);
+                double.TryParse(h.Price, out double p);
                 return p;
             }).Select(h => h.Name).ToArray();
         }

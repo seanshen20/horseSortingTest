@@ -17,8 +17,7 @@ namespace dotnet_code_challenge.Service
             foreach (var path in paths)
             {
                 var reader = new FileReader().ExecuteCreation(Path.GetExtension(path));
-                var a = reader.read(path);
-                result = result.Concat(reader.read(path).ToList()) ;
+                result = result.Concat(reader.read(path).ToList());
             }
 
             return result;
