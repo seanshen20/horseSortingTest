@@ -10,10 +10,15 @@ The code should be at a standard you'd feel comfortable with putting in producti
 
 # Getting Started
 Prerequsites
+
 Visual studio 2019 
+
 Download the zip and open the solution in vs2019 editor
-ctrl + F5 
+
+ctrl + F5 to run the program
+
 Four horses ascending order displayed from both xml and json are listed in console
+
 Build the project
 
 # Running the Tests
@@ -45,5 +50,6 @@ Various Nunit test is developed as a manner of TDD.
 linq sorting xml could be refactored. 
 Repository pattern might be applied if the system goes complex
 
+Data Processing should consider conflict of horse name or price, the structure of Json and xml (e.g all the files obtained from the different servers have the anticipated structure to format or not). Those could be raised to the next sprint, when requirements are clear. 
 
 
